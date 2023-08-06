@@ -232,6 +232,7 @@
                 $('#myTable tbody').html(response);
             }
         });
+		
         
     });
         // Handle the print button click event
