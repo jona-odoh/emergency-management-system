@@ -1,4 +1,4 @@
-The Emergency Management System is an online platform developed using PHP and MySQL that facilitates the reporting and management of immediate incidents and emergency situations. Whether it's a vehicle accident, criminal activity, or health scare, our system provides a quick and efficient way to notify and alert the appropriate authorities and responders.
+The Emergency Management System is an online platform developed using PHP and MySQL that facilitates the reporting and management of immediate incidents and emergency situations. Whether it's a vehicle accident, criminal activity, or health scare, the system provides a quick and efficient way to notify and alert the appropriate authorities and responders.
 
 ## Key Features
 
