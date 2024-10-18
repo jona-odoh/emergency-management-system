@@ -232,7 +232,7 @@
                                 <p class="copyright-text"> <a href="#">Emergency management system</a></p>
                             </div>
                             <div class="col-sm-6">
-                               <p class="copyright-text"> <a href="#">By Aminu Dalhatu Abdulmalik | 161103044</a></p>
+                               <p class="copyright-text"> <a href="#">By JONATHAN ODOH</a></p>
                             </div>
                         </div>
                     </div>
