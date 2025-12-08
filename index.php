@@ -1,274 +1,366 @@
-<?php include 'connect.php'; ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<!-- 01_02_home_2.html  [XR&CO'2014], Tue, 22 Oct 2019 11:54:23 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Emergency Management System</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="fonts/poppins/poppins.css">
-    <link rel="stylesheet" href="plugin/fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="plugin/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="plugin/process-bar/tox-progress.css">
-    <link rel="stylesheet" href="plugin/owl-carouse/owl.carousel.min.css">
-    <link rel="stylesheet" href="plugin/owl-carouse/owl.theme.default.min.css">
-    <link rel="stylesheet" href="plugin/animsition/css/animate.css">
-    <link rel="stylesheet" href="plugin/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="plugin/mediaelement/mediaelementplayer.css">
-    <link rel="stylesheet" href="plugin/datetimepicker/bootstrap-datepicker3.css">
-    <link rel="stylesheet" href="plugin/datetimepicker/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="plugin/lightgallery/lightgallery.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Emergency Management System - Rapid Response</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!--load page-->
-<div class="load-page">
-    <div class="sk-wave">
-        <div class="sk-rect sk-rect1"></div>
-        <div class="sk-rect sk-rect2"></div>
-        <div class="sk-rect sk-rect3"></div>
-        <div class="sk-rect sk-rect4"></div>
-        <div class="sk-rect sk-rect5"></div>
-    </div>
-</div>
-
-<!-- Mobile nav -->
-<nav class="visible-sm visible-xs mobile-menu-container mobile-nav">
-    <div class="menu-mobile-nav navbar-toggle">
-        <span class="icon-bar"><i class="fa fa-bars" aria-hidden="true"></i></span>
-    </div>
-    <div id="cssmenu" class="animated">
-        <div class="uni-icons-close"><i class="fa fa-times" aria-hidden="true"></i></div>
-        <ul class="nav navbar-nav animated">
-            <li class="has-sub"><a href="#">Home</a> </li>
-            
-            <li><a href="02_04_contact.html">Contact</a></li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-</nav>
-<!-- End mobile menu -->
-
-<div class="uni-home-2">
-    <div id="wrapper-container" class="site-wrapper-container">
-        <header>
-            <div class="uni-medicare-header sticky-menu">
-                
-
-                <div class="container">
-                    <div class="uni-medicare-header-main">
-                        <!--LOGO-->
-                        <div class="wrapper-logo">
-                            <a class="logo-default" href="#"><img src="images/logo.png" alt="" width="60px" class="img-responsive"></a>
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <!--MENU TEXT-->
-                        <div class="uni-main-menu">
-                            <nav class="main-navigation uni-menu-text">
-                                <div class="cssmenu">
-                                    <ul>
-                                        <li><a href="index.php">Home</a></li>
-                                       
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-
-                       
-                    </div>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-shield-alt"></i> Rapid Response EMS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#alerts">Active Alerts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#report">Report Emergency</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light btn-md" href="login.php">Login</a></li>
+                </ul>
             </div>
-        </header>
-
-        <div id="main-content" class="site-main-content">
-            <section class="site-content-area">
-
-                <!--BANNER-->
-                <div class="uni-banner">
-                    <div class="uni-owl-one-item owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="uni-banner-img uni-background-6"></div>
-                            <div class="content animated" data-animation="flipInX" data-delay="0.9s">
-                                <div class="container">
-                                    <div class="caption">
-                                        <h1>Emergency Management System</h1>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="uni-banner-img uni-background-5"></div>
-                            <div class="content animated" data-animation="flipInX" data-delay="0.9s">
-                                <div class="container">
-                                    <div class="caption">
-                                        <h1>Let us protect your health</h1>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="uni-banner-img uni-background-7"></div>
-                            <div class="content animated" data-animation="flipInX" data-delay="0.9s">
-                                <div class="container">
-                                    <div class="caption">
-                                        <h1>Make your emergency call</h1>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                 <!--HOME 2 ICON BOXS-->
-                <div class="uni-home-2-icons-box">
-                    <div class="uni-shortcode-icons-box-3">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="uni-shortcode-icons-box-3-default">
-                                        <div class="item-icons">
-                                            <i class="fa fa-user-md" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="item-caption">
-                                            <h4>Admin</h4>
-                                            <div class="uni-line"></div>
-                                            <h4><a href="portal/admin">Login</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="uni-shortcode-icons-box-3-default">
-                                        <div class="item-icons">
-                                            <i class="fa fa-ambulance" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="item-caption">
-                                            <h4>Agency </h4>
-                                            <div class="uni-line"></div>
-                                            <h4><a href="portal/agency">Login</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="uni-shortcode-icons-box-3-default">
-                                        <div class="item-icons">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="item-caption">
-                                            <h4>Users</h4>
-                                            <div class="uni-line"></div>
-                                            <h4><a href="portal/users">Login</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            
-                <!--DEPARTMENTS-->
-                <div class="uni-hơm-1-department">
-                    <div class="container">
-                        <div class="uni-home-title">
-                            <h3>Agency</h3>
-                            <div class="uni-underline"></div>
-                        </div>
-                        <div class="uni-shortcode-icon-box-1">
-                            <div class="row">
-                                <?php
-                               // include 'connect.php'
-                $result = $db->prepare("SELECT * FROM agency ORDER BY id DESC ");
-                $result->execute();
-                for($i=0; $row = $result->fetch(); $i++){   
-               ?> 
-                                <div class="col-md-4  col-sm-6">
-                                    <div class="uni-shortcode-icon-box-1-default">
-                                        <div class="item-icons">
-                                            <img src="uploads/<?php echo $row['photo']; ?>" alt="" class="img-responsive">
-                                        </div>
-                                        <div class="item-caption">
-                                            <h4><?php echo $row['agency_name'] ;?> <br> <small><?php echo $row['state'] ;?></small></h4>
-                                            <h3 style="text-align: center;"><?php echo $row['phone_number'] ;?></h3>
-                                            <h3 style="text-align: center;"><?php echo $row['email'] ;?></h3>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php } ?>
-
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                
-               
-                
-            </section>
         </div>
+    </nav>
 
-        <footer class="site-footer footer-default">
-            <div class="copyright-area">
-                <div class="container">
-                    <div class="copyright-content">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p class="copyright-text"> <a href="#">Emergency management system</a></p>
-                            </div>
-                            <div class="col-sm-6">
-                               <p class="copyright-text"> <a href="#">By JONATHAN ODOH</a></p>
-                            </div>
-                        </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-5">
+        <div class="container-fluid position-relative overflow-hidden">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 z-3">
+                    <h1 class="display-3 fw-bold mb-4">Emergency Management System</h1>
+                    <p class="lead mb-4">Fast, reliable emergency response coordination at your fingertips.  24/7 support for critical situations.</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#emergencyModal">
+                            <i class="fas fa-phone"></i> Report Emergency
+                        </button>
+                        <a href="#services" class="btn btn-outline-light btn-lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-animation">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <h3 class="text-danger">24/7</h3>
+                        <p>Available Always</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <h3 class="text-danger">500+</h3>
+                        <p>Emergency Responders</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <h3 class="text-danger">2min</h3>
+                        <p>Average Response Time</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <h3 class="text-danger">98%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Our Emergency Services</h2>
+                <p class="lead text-muted">Comprehensive emergency response solutions for all situations</p>
+            </div>
+            <div class="row g-4">
+                <!-- Medical Emergency -->
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                        <h4>Medical Emergency</h4>
+                        <p>Rapid medical response, ambulance dispatch, and emergency care coordination for critical health situations.</p>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Learn More</a>
+                    </div>
+                </div>
+                <!-- Fire Emergency -->
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>Fire Emergency</h4>
+                        <p>Immediate fire department dispatch, hazmat response, and incident command coordination. </p>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Learn More</a>
+                    </div>
+                </div>
+                <!-- Security Threat -->
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Security Threat</h4>
+                        <p>Law enforcement coordination, threat assessment, and public safety protocols activation.</p>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Learn More</a>
+                    </div>
+                </div>
+                <!-- Natural Disaster -->
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud-bolt"></i>
+                        </div>
+                        <h4>Natural Disaster</h4>
+                        <p>Disaster response coordination, evacuation assistance, and emergency shelter management.</p>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Learn More</a>
+                    </div>
+                </div>
+                <!-- Traffic Accident -->
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-car-crash"></i>
+                        </div>
+                        <h4>Traffic Accident</h4>
+                        <p>Vehicle incident response, traffic management, and victim assistance coordination.</p>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Learn More</a>
+                    </div>
+                </div>
+                <!-- Missing Person -->
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Missing Person</h4>
+                        <p>Search and rescue operations, public alerts, and coordinated investigation support.</p>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Alerts Section -->
+    <section id="alerts" class="alerts-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Active Alerts</h2>
+                <p class="lead text-muted">Current emergency situations and safety advisories</p>
+            </div>
+            <div class="row g-4" id="alertsContainer">
+                <!-- Alerts will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Emergency Section -->
+    <section id="report" class="report-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="display-5 fw-bold mb-4">Report an Emergency</h2>
+                    <p class="lead mb-4">Quickly report an emergency and get immediate assistance from our response team.</p>
+                    <div class="emergency-info">
+                        <div class="info-item mb-4">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Real-time GPS location tracking</span>
+                        </div>
+                        <div class="info-item mb-4">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Immediate responder dispatch</span>
+                        </div>
+                        <div class="info-item mb-4">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Live status updates</span>
+                        </div>
+                        <div class="info-item mb-4">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Multi-language support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form id="emergencyForm" class="emergency-form">
+                        <div class="mb-3">
+                            <label for="emergencyType" class="form-label">Emergency Type</label>
+                            <select class="form-select" id="emergencyType" required>
+                                <option value="">Select emergency type... </option>
+                                <option value="medical">Medical Emergency</option>
+                                <option value="fire">Fire Emergency</option>
+                                <option value="security">Security Threat</option>
+                                <option value="accident">Traffic Accident</option>
+                                <option value="disaster">Natural Disaster</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emergencyLocation" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="emergencyLocation" placeholder="Enter emergency location" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emergencyDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="emergencyDescription" rows="4" placeholder="Describe the emergency situation..." required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emergencyContact" class="form-label">Your Contact Number</label>
+                            <input type="tel" class="form-control" id="emergencyContact" placeholder="Enter your phone number" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-lg w-100">
+                            <i class="fas fa-exclamation-triangle"></i> Submit Emergency Report
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Get in Touch</h2>
+                <p class="lead text-muted">Contact us for non-emergency inquiries and general information</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="contact-card">
+                        <i class="fas fa-phone text-danger"></i>
+                        <h5>Emergency Hotline</h5>
+                        <p class="fw-bold">911</p>
+                        <p class="text-muted">Available 24/7</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope text-danger"></i>
+                        <h5>Email</h5>
+                        <p><a href="mailto:emergency@rapidresponse.com">emergency@rapidresponse.com</a></p>
+                        <p class="text-muted">Response within 1 hour</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt text-danger"></i>
+                        <h5>Headquarters</h5>
+                        <p>123 Emergency Ave<br>Safety City, SC 12345</p>
+                        <p class="text-muted">United States</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <h5><i class="fas fa-shield-alt"></i> Rapid Response EMS</h5>
+                    <p class="text-muted">Leading emergency management solutions for communities worldwide. </p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#home" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="#services" class="text-muted text-decoration-none">Services</a></li>
+                        <li><a href="#alerts" class="text-muted text-decoration-none">Alerts</a></li>
+                        <li><a href="#contact" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Resources</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="text-muted text-decoration-none">Safety Tips</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Training</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Documentation</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="text-danger me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-danger me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-danger me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-danger"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="text-center text-muted">
+                <p>&copy; 2025 Rapid Response Emergency Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Report Modal -->
+    <div class="modal fade" id="emergencyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title"><i class="fas fa-exclamation-triangle"></i> Emergency Report</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-3">For immediate life-threatening emergencies, please call <strong>911</strong> directly.</p>
+                    <p>Use this form to report other emergency situations that require coordination and response.</p>
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fas fa-info-circle"></i> Your location will be automatically detected for faster response.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="document.getElementById('report').scrollIntoView({behavior: 'smooth'});">
+                        <i class="fas fa-plus"></i> Report Emergency
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<script src="plugin/jquery/jquery-2.0.2.min.js"></script>
-<script src="plugin/jquery-ui/jquery-ui.min.js"></script>
-<script src="plugin/bootstrap/js/bootstrap.js"></script>
-<script src="plugin/process-bar/tox-progress.js"></script>
-<script src="plugin/waypoint/jquery.waypoints.min.js"></script>
-<script src="plugin/counterup/jquery.counterup.min.js"></script>
-<script src="plugin/owl-carouse/owl.carousel.min.js"></script>
-<script src="plugin/jquery-ui/jquery-ui.min.js"></script>
-<script src="plugin/mediaelement/mediaelement-and-player.js"></script>
-<script src="plugin/masonry/masonry.pkgd.min.js"></script>
-<script src="plugin/datetimepicker/moment.min.js"></script>
-<script src="plugin/datetimepicker/bootstrap-datepicker.min.js"></script>
-<script src="plugin/datetimepicker/bootstrap-datepicker.tr.min.js"></script>
-<script src="plugin/datetimepicker/bootstrap-datetimepicker.js"></script>
-<script src="plugin/datetimepicker/bootstrap-datetimepicker.fr.js"></script>
 
-<script src="plugin/lightgallery/picturefill.min.js"></script>
-<script src="plugin/lightgallery/lightgallery.js"></script>
-<script src="plugin/lightgallery/lg-pager.js"></script>
-<script src="plugin/lightgallery/lg-autoplay.js"></script>
-<script src="plugin/lightgallery/lg-fullscreen.js"></script>
-<script src="plugin/lightgallery/lg-zoom.js"></script>
-<script src="plugin/lightgallery/lg-hash.js"></script>
-<script src="plugin/lightgallery/lg-share.js"></script>
-<script src="plugin/sticky/jquery.sticky.js"></script>
+    <!-- Alert Details Modal -->
+    <div class="modal fade" id="alertModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="alertModalTitle">Alert Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="alertModalBody">
+                    <!-- Alert details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
-<!-- 01_02_home_2.html  [XR&CO'2014], Tue, 22 Oct 2019 11:54:52 GMT -->
 </html>
