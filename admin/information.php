@@ -3,49 +3,7 @@
 <body>
     <div class="main-wrapper">
         <?php include 'includes/navigation.php'; ?>
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-inner slimscroll">
-                <div id="sidebar-menu" class="sidebar-menu">
-                    <ul>
-                        <li class="menu-title">Main</li>
-                        <li class="">
-                            <a href="index.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
-                        </li>
-                        <li >
-                            <a href="agency.php"><i class="fa fa-user-md"></i> <span>Agency</span></a>
-                        </li>
-                        <li>
-                            <a href="emergency_type.php"><i class="fa fa-wheelchair"></i> <span>Emergency Types</span></a>
-                        </li>
-                        <?php
-                        // include('../connect.php');
-                        $result = $db->prepare("SELECT count(*) as total FROM emergency WHERE status = 'Pending'");
-                        $result->execute();
-                        for($i=0; $row = $result->fetch(); $i++){
-                        ?>  
-                        <li>
-                            <a href="view-emergency.php"><i class="fa fa-file"></i> <span>View Emergency</span> <span class="badge badge-pill bg-primary float-right"><?php echo $row['total'] ;?></span></a>
-                        </li>
-                    <?php } ?>
-                        <li>
-                            <a href="report-emergency.php"><i class="fa fa-heartbeat"></i> <span>Reports Emergency</span></a>
-                        </li>
-                        <li>
-                            <a href="report_history.php"><i class="fa fa-file-text-o"></i> <span>Reports History</span></a>
-                        </li>
-                        <li>
-                            <a href="users.php"><i class="fa fa-user-plus"></i> <span>Manage Admin</span></a>
-                        </li>
-                       <li class="active">
-                            <a href="information.php"><i class="fa fa-info-circle"></i> <span>Project information</span></a>
-                        </li>
-                        <li>
-                            <a href="logout.php"><i class="fa fa-power-off"></i> <span>Logout</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>       
+        <?php include 'includes/sidebar.php'; ?>
         </div>
         <div class="page-wrapper">
             <div class="content">
@@ -88,6 +46,18 @@
                                                 <li>
                                                     <span class="title">Email:</span>
                                                     <span class="text"><a href="#">jonathanodoh3140@gmail.com</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Facebook:</span>
+                                                    <span class="text"><a href="https://facebook.com/jonathan.odoh/">Jonathan Odoh</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">LinkedIn:</span>
+                                                    <span class="text"><a href="https://www.linkedin.com/in/jonathan-odoh-8aa801231/">Jonathan Odoh</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">GitHub:</span>
+                                                    <span class="text"><a href="https://github.com/jona-odoh">Jonathan Odoh</a></span>
                                                 </li>
                                                 <li>
                                                     <span class="title">Phone:</span>
@@ -179,12 +149,7 @@
             
         </div>
     </div>
-    <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/app.js"></script>
+    <?php include 'includes/footer.php'; ?>
 </body>
 
 
