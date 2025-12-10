@@ -9,7 +9,7 @@
 						
                         
                         <?php
-                        // include('../connect.php');
+                        
                         $result = $db->prepare("SELECT count(*) as total FROM emergency WHERE agency_id = {$_SESSION['SESS_AGENCY_ID']} AND status = 'Pending' ");
                         $result->execute();
                         for($i=0; $row = $result->fetch(); $i++){

@@ -3,49 +3,7 @@
 <body>
     <div class="main-wrapper">
         <?php include 'includes/navigation.php'; ?>
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-inner slimscroll">
-                <div id="sidebar-menu" class="sidebar-menu">
-                    <ul>
-                        <li class="menu-title">Main</li>
-                        <li class="">
-                            <a href="index.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
-                        </li>
-                        <li class="active">
-                            <a href="agency.php"><i class="fa fa-user-md"></i> <span>Agency</span></a>
-                        </li>
-                        <li>
-                            <a href="emergency_type.php"><i class="fa fa-wheelchair"></i> <span>Emergency Types</span></a>
-                        </li>
-                        <?php
-                        // include('../connect.php');
-                        $result = $db->prepare("SELECT count(*) as total FROM emergency WHERE status = 'Pending'");
-                        $result->execute();
-                        for($i=0; $row = $result->fetch(); $i++){
-                        ?>  
-                        <li>
-                            <a href="view-emergency.php"><i class="fa fa-file"></i> <span>View Emergency</span> <span class="badge badge-pill bg-primary float-right"><?php echo $row['total'] ;?></span></a>
-                        </li>
-                    <?php } ?>
-                        <li>
-                            <a href="report-emergency.php"><i class="fa fa-heartbeat"></i> <span>Reports Emergency</span></a>
-                        </li>
-                        <li>
-                            <a href="report_history.php"><i class="fa fa-file-text-o"></i> <span>Reports History</span></a>
-                        </li>
-                        <li>
-                            <a href="users.php"><i class="fa fa-user-plus"></i> <span>Manage Admin</span></a>
-                        </li>
-                       <li>
-                            <a href="information.php"><i class="fa fa-info-circle"></i> <span>Project information</span></a>
-                        </li>
-                        <li>
-                            <a href="logout.php"><i class="fa fa-power-off"></i> <span>Logout</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>    
+        <?php include 'includes/sidebar.php'; ?>
         <div class="page-wrapper">
             <div class="content">
                 <div class="row">
@@ -108,7 +66,7 @@
                     <div class="col-md-4 col-sm-4  col-lg-3">
                         <div class="profile-widget">
                             <div class="doctor-img">
-                                <a class="avatar" href="#"><img alt="" src="../../uploads/<?php echo $row['photo'];?>"></a>
+                                <a class="avatar" href="#"><img alt="" src="../uploads/<?php echo $row['photo'];?>"></a>
                             </div>
                             <div class="dropdown profile-action">
                                 <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
@@ -117,7 +75,7 @@
                                     <a class="dropdown-item" href="deleteagency.php?id=<?=$row['id'] ?>"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                 </div>
                             </div>
-                            <h4 class="doctor-name text-ellipsis"><a href="profile.html"><?php echo $row['agency_name'];?></a></h4>
+                            <h4 class="doctor-name text-ellipsis"><a href="#"><?php echo $row['agency_name'];?></a></h4>
                             <div class="doc-prof"><?php echo $row['email'];?>, <?php echo $row['phone_number']; ?></div>
                             <div class="user-country">
                                 <i class="fa fa-map-marker"></i> <?php echo $row['state']; ?>, <?php echo $row['address']; ?>
@@ -160,7 +118,7 @@
 				<div class="modal-content">
 					<div class="modal-body text-center">
 						<img src="assets/img/sent.png" alt="" width="50" height="46">
-						<h3>Are you sure want to delete this Doctor?</h3>
+						<h3>Are you sure want to delete this Agency?</h3>
 						<div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
                             <a href="deleteagency.php?id=<?=$row['id'] ?>" class="btn btn-danger" >Delete</a>
 						</div>
@@ -169,17 +127,7 @@
 			</div>
 		</div>
     </div>
-    <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <?php include 'includes/footer.php'; ?>
 </body>
 
-
-<!-- doctors23:17-->
 </html>

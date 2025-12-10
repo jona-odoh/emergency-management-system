@@ -17,7 +17,7 @@
                             <a href="emergency_type.php"><i class="fa fa-wheelchair"></i> <span>Emergency Types</span></a>
                         </li>
                         <?php
-                        // include('../connect.php');
+                        
                         $result = $db->prepare("SELECT count(*) as total FROM emergency WHERE status = 'Pending'");
                         $result->execute();
                         for($i=0; $row = $result->fetch(); $i++){

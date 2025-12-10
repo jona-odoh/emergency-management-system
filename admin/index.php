@@ -101,7 +101,7 @@
 			               ?> 
 											<tr>
 												<td style="min-width: 200px;">
-													 <a href="#" title=""><img src="../../uploads/<?php echo $row['photo']; ?>" alt="" class="w-40 rounded-circle"><span class="status online"></span></a>
+													 <a href="#" title=""><img src="../uploads/<?php echo $row['photo']; ?>" alt="" class="w-40 rounded-circle"><span class="status online"></span></a>
 													<h2><a href="#"><?php echo $row['agency_name']; ?> <span><?php echo $row['state']; ?></span></a></h2>
 												</td>                 
 												<td>
@@ -137,7 +137,7 @@
                                     <li>
                                         <div class="contact-cont">
                                             <div class="float-left user-img m-r-10">
-                                                <a href="#" title="John Doe"><img src="../../uploads/<?php echo $row['photo']; ?>" alt="" class="w-40 rounded-circle"><span class="status online"></span></a>
+                                                <a href="#" title="John Doe"><img src="../uploads/<?php echo $row['photo']; ?>" alt="" class="w-40 rounded-circle"><span class="status online"></span></a>
                                             </div>
                                             <div class="contact-info">
                                                 <span class="contact-name text-ellipsis"><?php echo $row['name']; ?></span>

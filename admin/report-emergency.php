@@ -3,49 +3,8 @@
 <body>
     <div class="main-wrapper">
         <?php include 'includes/navigation.php'; ?>
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-inner slimscroll">
-                <div id="sidebar-menu" class="sidebar-menu">
-                    <ul>
-                        <li class="menu-title">Main</li>
-                        <li class="">
-                            <a href="index.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
-                        </li>
-                        <li class="">
-                            <a href="agency.php"><i class="fa fa-user-md"></i> <span>Agency</span></a>
-                        </li>
-                        <li>
-                            <a href="emergency_type.php"><i class="fa fa-wheelchair"></i> <span>Emergency Types</span></a>
-                        </li>
-                        <?php
-                        // include('../connect.php');
-                        $result = $db->prepare("SELECT count(*) as total FROM emergency WHERE status = 'Pending'");
-                        $result->execute();
-                        for($i=0; $row = $result->fetch(); $i++){
-                        ?>  
-                        <li>
-                            <a href="view-emergency.php"><i class="fa fa-file"></i> <span>View Emergency</span> <span class="badge badge-pill bg-primary float-right"><?php echo $row['total'] ;?></span></a>
-                        </li>
-                    <?php } ?>
-                        <li class="active">
-                            <a href="report-emergency.php"><i class="fa fa-heartbeat"></i> <span>Reports Emergency</span></a>
-                        </li>
-                        <li>
-                            <a href="report_history.php"><i class="fa fa-file-text-o"></i> <span>Reports History</span></a>
-                        </li>
-                        <li>
-                            <a href="users.php"><i class="fa fa-user-plus"></i> <span>Manage Admin</span></a>
-                        </li>
-                       <li>
-                            <a href="information.php"><i class="fa fa-info-circle"></i> <span>Project information</span></a>
-                        </li>
-                        <li>
-                            <a href="logout.php"><i class="fa fa-power-off"></i> <span>Logout</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>    
+        <?php include 'includes/sidebar.php'; ?>
+          
         <div class="page-wrapper">
             <div class="content">
                 <div class="row">
@@ -130,7 +89,44 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>State</label>
-                                        <input class="form-control" name="state" type="text">
+                                        <select name="state" class="select" required>
+                                        <option value="">Select State</option>
+                                        <option value="Abuja">Abuja FCT</option>
+                                        <option value="Lagos">Lagos</option>
+                                        <option value="Kano">Kano</option>
+                                        <option value="Rivers">Rivers</option>
+                                        <option value="Oyo">Oyo</option>
+                                        <option value="Edo">Edo</option>
+                                        <option value="Delta">Delta</option>
+                                        <option value="Kaduna">Kaduna</option>
+                                        <option value="Ogun">Ogun</option>
+                                        <option value="Enugu">Enugu</option>
+                                        <option value="Plateau">Plateau</option>
+                                        <option value="Akwa Ibom">Akwa Ibom</option>
+                                        <option value="Cross River">Cross River</option>
+                                        <option value="Imo">Imo</option>
+                                        <option value="Bauchi">Bauchi</option>
+                                        <option value="Borno">Borno</option>
+                                        <option value="Anambra">Anambra</option>
+                                        <option value="Sokoto">Sokoto</option>
+                                        <option value="Niger">Niger</option>
+                                        <option value="Bayelsa">Bayelsa</option>
+                                        <option value="Benue">Benue</option>
+                                        <option value="Adamawa">Adamawa</option>
+                                        <option value="Taraba">Taraba</option>
+                                        <option value="Kebbi">Kebbi</option>
+                                        <option value="Kogi">Kogi</option>
+                                        <option value="Osun">Osun</option>
+                                        <option value="Ekiti">Ekiti</option>
+                                        <option value="Abia">Abia</option>
+                                        <option value="Kwara">Kwara</option>
+                                        <option value="Zamfara">Zamfara</option>
+                                        <option value="Gombe">Gombe</option>
+                                        <option value="Yobe">Yobe</option>
+                                        <option value="Nassarawa">Nassarawa</option>
+                                        <option value="Jigawa">Jigawa</option>
+                                        <option value="Ebonyi">Ebonyi</option>
+                                    </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -174,7 +170,7 @@
                                         <label>Upload image of emergency</label>
                                         <div class="profile-upload">
                                             <div class="upload-img">
-                                                <img alt="" src="assets/img/user.jpg">
+                                                <img alt="" src="../assets/img/user.jpg">
                                             </div>
                                             <div class="upload-input">
                                                 <input type="file" name="photo" class="form-control" >
@@ -219,15 +215,7 @@
 			<?php include 'includes/message.php'; ?>
         </div>
     </div>
-    <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <?php include 'includes/footer.php';?>
 	<script>
             $(function () {
                 $('#datetimepicker3').datetimepicker({
