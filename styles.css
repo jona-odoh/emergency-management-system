@@ -259,6 +259,60 @@ body {
     margin-bottom: 15px;
 }
 
+/* Agencies Section Styles */
+.agencies-section .agency-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agencies-section .agency-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.agency-logo img {
+    border: 3px solid #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.emergency-type-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.emergency-type-card:hover {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.empty-state {
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Simple version styles */
+.agency-simple {
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.agency-simple:hover {
+    border-color: #dc3545;
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .emergency-action .d-flex {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+    
+    .emergency-action .btn {
+        width: 100%;
+    }
+}
+
 /* Report Section */
 .report-section {
     padding: 80px 0;

@@ -1,3 +1,5 @@
+<?php
+include 'connect.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="#alerts">Active Alerts</a></li>
                     <li class="nav-item"><a class="nav-link" href="#report">Report Emergency</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-light btn-md" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light btn-md" href="sign-in.php">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -164,6 +166,70 @@
         </div>
     </section>
 
+    <!-- Emergency Agencies Section - Simple Version -->
+    <section id="agencies" class="agencies-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Our Emergency Agencies</h2>
+                <p class="lead text-muted">Quick access to emergency services in your area</p>
+            </div>
+            
+            <div class="row g-4">
+                <?php 
+                // include 'includes/connect.php';
+                $result = $db->prepare("SELECT * FROM agency ORDER BY id DESC LIMIT 6");
+                $result->execute();
+                
+                while($row = $result->fetch()):
+                ?>
+                <div class="col-lg-4 col-md-6">
+                    <div class="agency-simple card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="uploads/<?php echo $row['photo']; ?>" 
+                                    alt="<?php echo $row['agency_name']; ?>" 
+                                    class="rounded-circle mb-3"
+                                    width="80" height="80"
+                                    style="object-fit: cover;"
+                                    onerror="this.src='assets/img/default-agency.jpg'">
+                                <h5 class="card-title"><?php echo $row['agency_name']; ?></h5>
+                                <p class="text-muted mb-2">
+                                    <i class="fas fa-map-marker-alt text-danger me-1"></i>
+                                    <?php echo $row['state']; ?>
+                                </p>
+                            </div>
+                            
+                            <div class="agency-contact mb-3">
+                                <p class="mb-1">
+                                    <i class="fas fa-phone text-success me-2"></i>
+                                    <strong>Emergency:</strong> <?php echo $row['phone_number']; ?>
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-user text-primary me-2"></i>
+                                    <strong>Contact:</strong> <?php echo $row['personincharge']; ?>
+                                </p>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <a href="tel:<?php echo $row['phone_number']; ?>" 
+                                class="btn btn-outline-danger">
+                                    <i class="fas fa-phone me-1"></i> Call Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+            </div>
+            
+            <!-- View All Agencies Button -->
+            <div class="text-center mt-5">
+                <a href="agencies.php" class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-list me-2"></i>View All Agencies
+                </a>
+            </div>
+        </div>
+    </section>
     <!-- Active Alerts Section -->
     <section id="alerts" class="alerts-section py-5 bg-light">
         <div class="container">

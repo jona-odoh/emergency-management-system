@@ -1,6 +1,6 @@
 // Sample Alerts Data
 const alertsData = [
-    {
+    { 
         id: 1,
         title: 'Severe Weather Alert',
         severity: 'critical',

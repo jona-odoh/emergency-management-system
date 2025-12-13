@@ -75,7 +75,3 @@ function clean($str) {
 		die("Query failed");
 	}
 ?>
-
-
-
-
