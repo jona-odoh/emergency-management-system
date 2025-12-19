@@ -151,9 +151,9 @@
                                 <h3>Emergency Image</h3>
                                 <?php
                                 if (!empty($row['photo'])) {
-                                    echo '<img src="../../uploads/' . $row['photo'] . '" width="500px" height="300px">';
+                                    echo '<img src="../uploads/' . $row['photo'] . '" width="500px" height="300px">';
                                 } else {
-                                    echo '<img src="../../img/default.jpg" width="500px" height="300px">';
+                                    echo '<img src="../img/default.jpg" width="500px" height="300px">';
                                 }
                                 ?>
                             </div>
@@ -168,6 +168,7 @@
                             <div class="m-t-20 text-center">
                                 <button class="btn btn-primary submit-btn">Update Status</button>
                             </div>
+                            <br><br><br>
                           
 
 
@@ -180,14 +181,14 @@
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+	<script src="../assets/js/moment.min.js"></script>
+	<script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../assets/js/app.js"></script>
 	<script>
             $(function () {
                 $('#datetimepicker3').datetimepicker({

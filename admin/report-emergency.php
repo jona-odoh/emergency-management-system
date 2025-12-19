@@ -88,47 +88,34 @@ include 'includes/head.php';
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>State</label>
-                                        <select name="state" class="select">
-                                        <option value="">Select State</option>
-                                        <option value="Abuja">Abuja FCT</option>
-                                        <option value="Lagos">Lagos</option>
-                                        <option value="Kano">Kano</option>
-                                        <option value="Rivers">Rivers</option>
-                                        <option value="Oyo">Oyo</option>
-                                        <option value="Edo">Edo</option>
-                                        <option value="Delta">Delta</option>
-                                        <option value="Kaduna">Kaduna</option>
-                                        <option value="Ogun">Ogun</option>
-                                        <option value="Enugu">Enugu</option>
-                                        <option value="Plateau">Plateau</option>
-                                        <option value="Akwa Ibom">Akwa Ibom</option>
-                                        <option value="Cross River">Cross River</option>
-                                        <option value="Imo">Imo</option>
-                                        <option value="Bauchi">Bauchi</option>
-                                        <option value="Borno">Borno</option>
-                                        <option value="Anambra">Anambra</option>
-                                        <option value="Sokoto">Sokoto</option>
-                                        <option value="Niger">Niger</option>
-                                        <option value="Bayelsa">Bayelsa</option>
-                                        <option value="Benue">Benue</option>
-                                        <option value="Adamawa">Adamawa</option>
-                                        <option value="Taraba">Taraba</option>
-                                        <option value="Kebbi">Kebbi</option>
-                                        <option value="Kogi">Kogi</option>
-                                        <option value="Osun">Osun</option>
-                                        <option value="Ekiti">Ekiti</option>
-                                        <option value="Abia">Abia</option>
-                                        <option value="Kwara">Kwara</option>
-                                        <option value="Zamfara">Zamfara</option>
-                                        <option value="Gombe">Gombe</option>
-                                        <option value="Yobe">Yobe</option>
-                                        <option value="Nassarawa">Nassarawa</option>
-                                        <option value="Jigawa">Jigawa</option>
-                                        <option value="Ebonyi">Ebonyi</option>
-                                    </select>
+                                        <label for="lga">LGA</label>
+                                        <select name="state" id="state" class="select" required>
+                                            <option value="" disabled selected>Select LGA</option>
+                                            <option value="Adavi">Adavi</option>
+                                            <option value="Ajaokuta">Ajaokuta</option>
+                                            <option value="Ankpa">Ankpa</option>
+                                            <option value="Bassa">Bassa</option>
+                                            <option value="Dekina">Dekina</option>
+                                            <option value="Ibaji">Ibaji</option>
+                                            <option value="Idah">Idah</option>
+                                            <option value="Igalamela-Odolu">Igalamela-Odolu</option>
+                                            <option value="Ijumu">Ijumu</option>
+                                            <option value="Kabba-Bunu">Kabba/Bunu</option>
+                                            <option value="Kogi">Kogi</option>
+                                            <option value="Lokoja">Lokoja</option>
+                                            <option value="Mopa-Muro">Mopa-Muro</option>
+                                            <option value="Ofu">Ofu</option>
+                                            <option value="Ogori-Magongo">Ogori/Magongo</option>
+                                            <option value="Okehi">Okehi</option>
+                                            <option value="Okene">Okene</option>
+                                            <option value="Olamaboro">Olamaboro</option>
+                                            <option value="Omala">Omala</option>
+                                            <option value="Yagba-East">Yagba East</option>
+                                            <option value="Yagba-West">Yagba West</option>
+                                        </select>
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Phone Number</label>

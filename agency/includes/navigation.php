@@ -1,7 +1,7 @@
 <div class="header">
 			<div class="header-left">
 				<a href="index-2.html" class="logo">
-					<img src="assets/img/logo.png" width="35" height="35" alt=""> <span>EMS</span>
+					<img src="../assets/img/logo.png" width="35" height="35" alt=""> <span>EMS</span>
 				</a>
 			</div>
 			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -35,7 +35,7 @@
                                     <a href="make_action.php?id=<?php echo $row['id'];?>">
                                         <div class="media">
 											<span class="avatar">
-												<img alt="" src="assets/img/user.jpg" class="img-fluid">
+												<img alt="" src="../assets/img/user.jpg" class="img-fluid">
 											</span>
 											<div class="media-body">
 												<p class="noti-details">They is a pending <?php echo $row['case_severity'] ?> emergency at <span class="noti-title"><?php echo $row['address'] ?>, <?php echo $row['state'] ?></span> the <span class="noti-time"><?php echo $row['agency_name'] ?></span> is needed</p>
@@ -60,9 +60,9 @@
                         <span class="user-img">
                             <?php
                             if (!empty($_SESSION['SESS_PRO_PIC'])) {
-                                echo '<img class="rounded-circle" src="../../uploads/' . $_SESSION['SESS_PRO_PIC'] . '" width="24" alt="Admin">';
+                                echo '<img class="rounded-circle" src="../uploads/' . $_SESSION['SESS_PRO_PIC'] . '" width="24" alt="Admin">';
                             } else {
-                                echo '<img class="rounded-circle" src="../../uploads/default.jpg" width="24" alt="Admin">';
+                                echo '<img class="rounded-circle" src="../uploads/default.jpg" width="24" alt="Admin">';
                             }
                             ?>
                             <span class="status online"></span>

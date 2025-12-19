@@ -3,7 +3,7 @@
 include"includes/connect.php";
 session_start();
 if(!isset($_SESSION['SESS_FIRST_NAME'])){
-    header("location: sign-in.php");
+    header("location: ../index.php");
 }
 ?>
 <!DOCTYPE html>

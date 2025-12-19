@@ -46,7 +46,9 @@ session_start();
                         <div class="form-group text-center">
                             <button type="submit" name="submit" class="btn btn-primary account-btn">Login</button>
                         </div>
-                        
+                        <div class="text-center register-link">
+                            Don’t have an account? <a href="register.php">Register Now</a>
+                        </div>
                     </form>
                 </div>
             </div>

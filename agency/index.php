@@ -101,7 +101,7 @@
 			               ?> 
 											<tr>
 												<td style="min-width: 200px;">
-													 <a href="#" title=""><img src="../../uploads/<?php echo $row['photo']; ?>" alt="" class="w-40 rounded-circle"><span class="status online"></span></a>
+													 <a href="#" title=""><img src="../uploads/<?php echo $row['photo']; ?>" alt="" class="w-40 rounded-circle"><span class="status online"></span></a>
 													<h2><a href="#"><?php echo $row['agency_name']; ?> <span><?php echo $row['state']; ?></span></a></h2>
 												</td>                 
 												<td>
@@ -139,9 +139,9 @@
                                             <div class="float-left user-img m-r-10">
                                             	<?php 
                                             	if (!empty($row['photo'])) {
-										        echo '<img class="w-40 rounded-circle" src="../../uploads/' . $row['photo'] . '" ><span class="status online"></span>';
+										        echo '<img class="w-40 rounded-circle" src="../uploads/' . $row['photo'] . '" ><span class="status online"></span>';
 										    } else {
-										        echo '<img src="../../uploads/default.jpg" class="w-40 rounded-circle"><span class="status online"></span>';
+										        echo '<img src="../uploads/default.jpg" class="w-40 rounded-circle"><span class="status online"></span>';
 										    }
 										    ?>
                                                 
@@ -167,13 +167,13 @@
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/Chart.bundle.js"></script>
-    <script src="assets/js/chart.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/Chart.bundle.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/app.js"></script>
 
 </body>
 

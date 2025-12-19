@@ -23,7 +23,9 @@
                             <div class="experience-box">
                                 <ul class="experience-list">
                                      <?php
-                $result = $db->prepare("SELECT * FROM emergency WHERE victim_id = {$_SESSION['SESS_AGENCY_ID']} AND status = 'Resolved' ");
+                $result = $db->prepare("SELECT * FROM emergency WHERE victim_id = {$_SESSION['SESS_AGENCY_ID']} 
+                AND status = 'Resolved'
+                 ");
                 $result->execute();
                 for($i=1; $row = $result->fetch(); $i++){ 
                

@@ -125,8 +125,31 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>State</label>
-                                        <input class="form-control" name="state" type="text">
+                                        <label for="lga">LGA</label>
+                                        <select name="state" id="state" class="select" required>
+                                            <option value="" disabled selected>Select LGA</option>
+                                            <option value="Adavi">Adavi</option>
+                                            <option value="Ajaokuta">Ajaokuta</option>
+                                            <option value="Ankpa">Ankpa</option>
+                                            <option value="Bassa">Bassa</option>
+                                            <option value="Dekina">Dekina</option>
+                                            <option value="Ibaji">Ibaji</option>
+                                            <option value="Idah">Idah</option>
+                                            <option value="Igalamela-Odolu">Igalamela-Odolu</option>
+                                            <option value="Ijumu">Ijumu</option>
+                                            <option value="Kabba-Bunu">Kabba/Bunu</option>
+                                            <option value="Kogi">Kogi</option>
+                                            <option value="Lokoja">Lokoja</option>
+                                            <option value="Mopa-Muro">Mopa-Muro</option>
+                                            <option value="Ofu">Ofu</option>
+                                            <option value="Ogori-Magongo">Ogori/Magongo</option>
+                                            <option value="Okehi">Okehi</option>
+                                            <option value="Okene">Okene</option>
+                                            <option value="Olamaboro">Olamaboro</option>
+                                            <option value="Omala">Omala</option>
+                                            <option value="Yagba-East">Yagba East</option>
+                                            <option value="Yagba-West">Yagba West</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -170,7 +193,7 @@
                                         <label>Upload image of emergency</label>
                                         <div class="profile-upload">
                                             <div class="upload-img">
-                                                <img alt="" src="assets/img/user.jpg">
+                                                <img alt="" src="../assets/img/user.jpg">
                                             </div>
                                             <div class="upload-input">
                                                 <input type="file" name="photo" class="form-control" >
@@ -203,6 +226,7 @@
                             <div class="m-t-20 text-center">
                                 <button class="btn btn-primary submit-btn" >Send Request</button>
                             </div>
+                            <br><br>
                           
 
                         </form>
@@ -213,14 +237,14 @@
         </div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+	<script src="../assets/js/moment.min.js"></script>
+	<script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../assets/js/app.js"></script>
 	<script>
             $(function () {
                 $('#datetimepicker3').datetimepicker({

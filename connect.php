@@ -77,6 +77,26 @@ try {
 /**
  * Display formatted database error page
  */
+function get($val){
+    return @$_GET[$val];
+}
+
+class App {   
+    public static function message($type,$message,$code=''){
+        if($type=='error'){
+            return '<div class="alert alert-danger alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                               '.$message.' <a class="alert-link" href="#">'.$code.'</a>.
+                            </div>';
+        }else{
+             return '<div class="alert alert-success alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                               '.$message.' <a class="alert-link" href="#">'.$code.'</a>.
+                            </div>';
+        }
+    }
+}
+    
 function displayDatabaseError($errorType, $errorMessage) {
     global $projectName, $projectShortName, $developerName, $version, $lastUpdated;
     

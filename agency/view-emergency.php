@@ -155,16 +155,16 @@
         </div>
           </div>
     <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/jquery.dataTables.min.js"></script>
-    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+    <script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../assets/js/app.js"></script>
     <script>
     $(document).ready(function () {
         // Initialize the datepickers
@@ -227,7 +227,7 @@
         printWindow.document.open();
         printWindow.document.write('<html><head><title>Print</title>');
         printWindow.document.write('<style>@media print {.emergency-heading {font-weight: bold;}}</style>');
-        printWindow.document.write('<link rel="stylesheet" href="assets/css/bootstrap.min.css">');
+        printWindow.document.write('<link rel="stylesheet" href="../assets/css/bootstrap.min.css">');
         printWindow.document.write('</head><body>');
         printWindow.document.write('<div class="col-md-12">');
         printWindow.document.write('<h2 class="emergency-heading">Emergency Reports</h2>');
